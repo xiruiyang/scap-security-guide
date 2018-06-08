@@ -20,8 +20,8 @@ description: |-
     <pre>/usr/sap/trans</pre>
     <pre>/usr/sap/trans/*</pre>
     <pre>/usr/sap/trans/.sapconf</pre>
-    <pre>home directroy of sidadm</pre>
-    <pre>home directroy of sidadm/*</pre>
+    The home directories of sidadm are not included in this list. They will be verified in
+    another rule.
     <tt>SID</tt> is SAP System ID which is always three alphanumeric characters
     beginning with an alphabetic character. <tt>SID</tt> is in uppercase while the
     user <tt>sidadm</tt> in lowercase.
