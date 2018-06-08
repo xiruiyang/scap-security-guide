@@ -28,7 +28,11 @@ class FileGroupOwnerGenerator(FilesGenerator):
         # directory, a file, subfolders (one-level down) or asteriskfiles (one-level down). 
         # The default value is file.
         if len(args) > 3 and args[3]:
-            dftype = args[3]
+            if args[3] in {"directory","file","subfolders","asteriskfiles"}:
+                dftype = args[3]
+            else:
+                raise RuntimeError(
+                    "ERROR: input violation: the type", args[3] , "is not valid")
         else:
             dftype = "file"
 

@@ -1,17 +1,17 @@
 <def-group>
   <definition class="compliance" id="file_groupowner_sap" version="1">
     <metadata>
-      <title>Access Privileges of Directory /sapmnt/SID/exe</title>
+      <title>Group Owner of Directory /sapmnt/SID/exe</title>
       <affected family="unix">
         <platform>Oracle Linux 7</platform>
       </affected>
-      <description>Directory /sapmnt/SID/exe should has permissions 755, owned by sidadm and belongs to group sapsys.</description>
+      <description>The list of SAP directories should belong to group sapsys according to SAP Security Baseline Template v1.9 section 4.1.2.2. The home directories of sidadm is not included here.</description>
     </metadata>
     <criteria operator="AND">
       <extend_definition definition_ref="file_groupowner_sapmnt_SID_exe"
       comment="directories /sapmnt/SID/exe is owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_sapmnt_SID_exe_saposcol"
-      comment="files /sapmnt/SID/exe/saposcol is owned by group sapsys"/>
+      comment="file /sapmnt/SID/exe/saposcol is owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_sapmnt_SID_global"
       comment="directories /sapmnt/SID/global is owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_sapmnt_SID_profile"
