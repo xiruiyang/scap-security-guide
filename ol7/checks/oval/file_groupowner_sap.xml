@@ -1,43 +1,43 @@
 <def-group>
   <definition class="compliance" id="file_groupowner_sap" version="1">
     <metadata>
-      <title>Access Privileges of Directory /sapmnt/SID/exe</title>
+      <title>Group Owner of Directory /sapmnt/SID/exe</title>
       <affected family="unix">
         <platform>Oracle Linux 7</platform>
       </affected>
-      <description>Directory /sapmnt/SID/exe should has permissions 755, owned by sidadm and belongs to group sapsys.</description>
+      <description>Directories and Files for SAP should be owned by group sapsys.</description>
     </metadata>
     <criteria operator="AND">
       <extend_definition definition_ref="file_groupowner_sapmnt_SID_exe"
-      comment="directories /sapmnt/SID/exe is owned by group sapsys"/>
+      comment="directories /sapmnt/SID/exe are owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_sapmnt_SID_exe_saposcol"
-      comment="files /sapmnt/SID/exe/saposcol or type/platform/saposcol is owned by group sapsys"/>
+      comment="files /sapmnt/SID/exe/saposcol or type/platform/saposcol are owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_usr_sap_hostctrl_exe_saposcol"
       comment="files /usr/sap/hostctrl/exe/saposcol is owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_sapmnt_SID_global"
-      comment="directories /sapmnt/SID/global is owned by group sapsys"/>
+      comment="directories /sapmnt/SID/global are owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_sapmnt_SID_profile"
-      comment="directories /sapmnt/SID/profile is owned by group sapsys"/>
+      comment="directories /sapmnt/SID/profile are owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_usr_sap_SID"
-      comment="directories /usr/sap/SID is owned by group sapsys"/>
+      comment="directories /usr/sap/SID are owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_usr_sap_SID_instance"
-      comment="directories /usr/sap/SID/instance is owned by group sapsys"/>
+      comment="directories /usr/sap/SID/instance are owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_usr_sap_SID_instance_sec"
-      comment="directories /usr/sap/SID/instance/sec is owned by group sapsys"/>
+      comment="directories /usr/sap/SID/instance/sec are owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_usr_sap_SID_SYS"
-      comment="directories /usr/sap/SID/SYS is owned by group sapsys"/>
+      comment="directories /usr/sap/SID/SYS are owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_usr_sap_SID_SYS_subfolders"
-      comment="subfolders /usr/sap/SID/SYS/* is owned by group sapsys"/>
+      comment="subfolders /usr/sap/SID/SYS/* are owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_usr_sap_SID_SYS_asteriskfiles"
-      comment="asteriskfiles /usr/sap/SID/SYS/* is owned by group sapsys"/>
+      comment="asteriskfiles /usr/sap/SID/SYS/* are owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_usr_sap_trans"
       comment="directory /usr/sap/trans is owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_usr_sap_trans_subfolders"
-      comment="subfolders /usr/sap/trans/* is owned by group sapsys"/>
+      comment="subfolders /usr/sap/trans/* are owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_usr_sap_trans_asteriskfiles"
-      comment="asteriskfiles /usr/sap/trans/* is owned by group sapsys"/>
+      comment="asteriskfiles /usr/sap/trans/* are owned by group sapsys"/>
       <extend_definition definition_ref="file_groupowner_usr_sap_trans__sapconf"
-      comment="directory /usr/sap/trans/.sapconf is owned by group sapsys"/>
+      comment="file /usr/sap/trans/.sapconf is owned by group sapsys"/>
     </criteria>
   </definition>
 </def-group>

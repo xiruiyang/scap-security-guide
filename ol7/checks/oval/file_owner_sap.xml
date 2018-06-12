@@ -9,35 +9,35 @@
     </metadata>
     <criteria operator="AND">
       <extend_definition definition_ref="file_owner_sapmnt_SID_exe"
-      comment="directories /sapmnt/SID/exe is owned by sidadm"/>
+      comment="directory /sapmnt/SID/exe is owned by sidadm"/>
       <extend_definition definition_ref="file_owner_sapmnt_SID_exe_saposcol"
       comment="file /sapmnt/SID/exe/saposcol or type/platform/saposcol is owned by root"/>
       <extend_definition definition_ref="file_owner_usr_sap_hostctrl_exe_saposcol"
       comment="file /usr/sap/hostctrl/exe/saposcol is owned by root"/>
       <extend_definition definition_ref="file_owner_sapmnt_SID_global"
-      comment="directories /sapmnt/SID/global is owned by sidadm"/>
+      comment="directory /sapmnt/SID/global is owned by sidadm"/>
       <extend_definition definition_ref="file_owner_sapmnt_SID_profile"
-      comment="directories /sapmnt/SID/profile is owned by sidadm"/>
+      comment="directory /sapmnt/SID/profile is owned by sidadm"/>
       <extend_definition definition_ref="file_owner_usr_sap_SID"
-      comment="directories /usr/sap/SID is owned by sidadm"/>
+      comment="directory /usr/sap/SID is owned by sidadm"/>
       <extend_definition definition_ref="file_owner_usr_sap_SID_instance"
-      comment="directories /usr/sap/SID/instance is owned by sidadm"/>
+      comment="directory /usr/sap/SID/instance is owned by sidadm"/>
       <extend_definition definition_ref="file_owner_usr_sap_SID_instance_sec"
-      comment="directories /usr/sap/SID/instance/sec is owned by sidadm"/>
+      comment="directory /usr/sap/SID/instance/sec is owned by sidadm"/>
       <extend_definition definition_ref="file_owner_usr_sap_SID_SYS"
-      comment="directories /usr/sap/SID/SYS is owned by sidadm"/>
+      comment="directory /usr/sap/SID/SYS is owned by sidadm"/>
       <extend_definition definition_ref="file_owner_usr_sap_SID_SYS_subfolders"
-      comment="subfolders /usr/sap/SID/SYS/* is owned by sidadm"/>
+      comment="subfolders /usr/sap/SID/SYS/* are owned by sidadm"/>
       <extend_definition definition_ref="file_owner_usr_sap_SID_SYS_asteriskfiles"
-      comment="asteriskfiles /usr/sap/SID/SYS/* is owned by sidadm"/>
+      comment="asteriskfiles /usr/sap/SID/SYS/* are owned by sidadm"/>
       <extend_definition definition_ref="file_owner_usr_sap_trans"
       comment="directory /usr/sap/trans is owned by sidadm"/>
       <extend_definition definition_ref="file_owner_usr_sap_trans_subfolders"
-      comment="subfolders /usr/sap/trans/* is owned by sidadm"/>
+      comment="subfolders /usr/sap/trans/* are owned by sidadm"/>
       <extend_definition definition_ref="file_owner_usr_sap_trans_asteriskfiles"
-      comment="asteriskfiles /usr/sap/trans/* is owned by sidadm"/>
+      comment="asteriskfiles /usr/sap/trans/* are owned by sidadm"/>
       <extend_definition definition_ref="file_owner_usr_sap_trans__sapconf"
-      comment="directory /usr/sap/trans/.sapconf is owned by sidadm"/>
+      comment="file /usr/sap/trans/.sapconf is owned by sidadm"/>
     </criteria>
   </definition>
 </def-group>
