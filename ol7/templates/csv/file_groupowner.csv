@@ -1,0 +1,30 @@
+# Directory or file groupownership
+# The format is: 
+#
+# PATH,GROUP[,[ALT_NAME],[directory|file|subfolders|asteriskfiles],[PATHREGEX]]
+# 
+# The first column is the full path (include file name if the type is file).
+# The second column is the group name the directory or file should belong to.
+# The third column is optional alternative name, it overwrites the convention. 
+# The fourth column is optional, it indicates the type. Valid types are directory,
+# file, subfolders (one-level) and asteriskfiles (one-level). Default is file.
+# The fifth column is optional, it's the regular expression of the path as defined
+# for OVAL in http://oval.mitre.org/language/about/re_support_5.6.html.
+# Remediation files will only be generated from template if the fifth column does not
+# exist or is empty. Please write individual remediations when using regex.
+#
+/sapmnt/SID/exe,sapsys,,directory,^/sapmnt/[A-Z][A-Z0-9][A-Z0-9]/exe$
+/sapmnt/SID/exe/saposcol,sapsys,,file,^/sapmnt/[A-Z][A-Z0-9][A-Z0-9]/exe/(|(|n)uc/[A-Za-z0-9]+/)saposcol$
+/usr/sap/hostctrl/exe/saposcol,sapsys
+/sapmnt/SID/global,sapsys,,directory,^/sapmnt/[A-Z][A-Z0-9][A-Z0-9]/global$
+/sapmnt/SID/profile,sapsys,,directory,^/sapmnt/[A-Z][A-Z0-9][A-Z0-9]/profile$
+/usr/sap/SID,sapsys,,directory,^/usr/sap/[A-Z][A-Z0-9][A-Z0-9]$
+/usr/sap/SID/instance,sapsys,,directory,^/usr/sap/[A-Z][A-Z0-9][A-Z0-9]/[DVEBMGS|D|JC|J|ASCS|SCS|ERS][0-9][0-9]$
+/usr/sap/SID/instance/sec,sapsys,,directory,^/usr/sap/[A-Z][A-Z0-9][A-Z0-9]/[DVEBMGS|D|JC|J|ASCS|SCS|ERS][0-9][0-9]/sec$
+/usr/sap/SID/SYS,sapsys,,directory,^/usr/sap/[A-Z][A-Z0-9][A-Z0-9]/SYS$
+/usr/sap/SID/SYS/*,sapsys,usr_sap_SID_SYS_subfolders,subfolders,^/usr/sap/[A-Z][A-Z0-9][A-Z0-9]/SYS$
+/usr/sap/SID/SYS/*,sapsys,usr_sap_SID_SYS_asteriskfiles,asteriskfiles,^/usr/sap/[A-Z][A-Z0-9][A-Z0-9]/SYS$
+/usr/sap/trans,sapsys,,directory
+/usr/sap/trans/*,sapsys,usr_sap_trans_subfolders,subfolders,^/usr/sap/trans$
+/usr/sap/trans/*,sapsys,usr_sap_trans_asteriskfiles,asteriskfiles,^/usr/sap/trans$
+/usr/sap/trans/.sapconf,sapsys,,file,^/usr/sap/trans/\.sapconf$

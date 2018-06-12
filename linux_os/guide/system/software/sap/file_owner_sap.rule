@@ -1,0 +1,38 @@
+documentation_complete: true
+
+prodtype: ol7
+
+title: 'Owner of SAP Directories and Files'
+
+description: |-
+    It is recommended in the SAP Security Baseline Template v1.9 Section 4.1.2.2 the 
+    followingling listed SAP directories and files should be owned by
+    user <tt>sidadm</tt>.
+    <pre>/sapmnt/SID/exe</pre>
+    <pre>/sapmnt/SID/global</pre>
+    <pre>/sapmnt/SID/profile</pre>
+    <pre>/usr/sap/SID</pre>
+    <pre>/usr/sap/SID/instance</pre>
+    <pre>/usr/sap/SID/instance/sec</pre>
+    <pre>/usr/sap/SID/SYS</pre>
+    <pre>/usr/sap/SID/SYS/*</pre>
+    <pre>/usr/sap/trans</pre>
+    <pre>/usr/sap/trans/*</pre>
+    <pre>/usr/sap/trans/.sapconf</pre>
+    The following SAP file should be owned by user <tt>root</tt>
+    <pre>/sapmnt/SID/exe/saposcol or /sapmnt/SID/exe/type/platform/saposcol or 
+    /usr/sap/hostctrl/exe/saposcol</pre>
+    The home directories of sidadm are not included in this test.
+    <tt>SID</tt> is SAP System ID which is always three alphanumeric characters
+    beginning with an alphabetic character. <tt>SID</tt> is in uppercase while the
+    user <tt>sidadm</tt> in lowercase.
+    <tt>Limitation:</tt> With the current version, this OVAL test can only verify
+    the ownership when there is only one <tt>sidadm</tt> on each OS/VM.
+    If there are multiple <tt>sidadm</tt> users on one OS/VM, the test will fail on it
+    regardless the directories belong to which sidadm user.
+    Nevertheless, the bash remediation commands can always be used to set correct ownership,
+    the commands can deal with multiple SIDs / multiple sidadm users on each OS/VM.
+
+rationale: |-
+
+severity: medium
